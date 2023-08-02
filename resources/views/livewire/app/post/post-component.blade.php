@@ -5,7 +5,7 @@
                 <form wire:submit="addPost">
                     <div class="form-group mb-4">
                         <label for="">Title</label>
-                        <input type="text" class="form-control" wire:model.blur='title' />
+                        <input type="text" class="form-control" wire:model.blur='title' wire:dirty.class="border-danger" />
                         @error('title')
                             <p class="text-danger" style="font-size: 12.5px;">{{ $message }}</p>
                         @enderror
