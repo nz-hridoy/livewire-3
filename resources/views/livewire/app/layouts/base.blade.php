@@ -10,10 +10,9 @@
 </head>
 <style>
     html, body{
-        height:100vh;
-        width:100vw;
         background: #111827;
         color: white;
+        overflow-x: hidden;
     }
 </style>
 <body>
