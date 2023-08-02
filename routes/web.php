@@ -1,5 +1,9 @@
 <?php
 
+use App\Livewire\App\IndexComponent;
+use App\Livewire\App\Post\AddPostComponent;
+use App\Livewire\App\Post\EditPostComponent;
+use App\Livewire\App\Post\PostComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', IndexComponent::class)->name('app.index');
+Route::get('/posts', PostComponent::class)->name('app.allPosts');
+Route::get('/posts/add-new', AddPostComponent::class)->name('app.addPost');
+Route::get('/posts/edit/{id}', EditPostComponent::class)->name('app.editPost');
