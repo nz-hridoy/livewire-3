@@ -6,7 +6,25 @@ use Livewire\Component;
 
 class PostComponent extends Component
 {
-    public $todo;
+    public $title, $content;
+
+    public function updated($fields)
+    {
+        $this->validateOnly($fields, [
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+    }
+
+    public function addPost()
+    {
+        $this->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
+
+    }
 
     public function render()
     {
