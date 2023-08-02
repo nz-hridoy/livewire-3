@@ -3,9 +3,11 @@
 namespace App\Livewire\App\Post;
 
 use Livewire\Component;
+use Livewire\Attributes\Computed;
 
 class PostComponent extends Component
 {
+    #[Computed]
     public $title, $content;
 
     public function updated($fields)
@@ -24,6 +26,11 @@ class PostComponent extends Component
         ]);
 
 
+    }
+
+    public function profile_data()
+    {
+        return 'Hello World';
     }
 
     public function render()
