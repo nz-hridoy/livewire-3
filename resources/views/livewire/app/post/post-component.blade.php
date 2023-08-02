@@ -5,14 +5,14 @@
                 <form wire:submit="addPost">
                     <div class="form-group mb-4">
                         <label for="">Title</label>
-                        <input type="text" class="form-control" wire:model.live='title' />
+                        <input type="text" class="form-control" wire:model.blur='title' />
                         @error('title')
                             <p class="text-danger" style="font-size: 12.5px;">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group mb-5">
                         <label for="">Content <small class="text-muted" x-text="$wire.content.length"></small></label>
-                        <textarea class="form-control" wire:model.live='content' cols="30" rows="10"></textarea>
+                        <textarea class="form-control" wire:model.blur='content' cols="30" rows="10"></textarea>
                         @error('content')
                             <p class="text-danger" style="font-size: 12.5px;">{{ $message }}</p>
                         @enderror
