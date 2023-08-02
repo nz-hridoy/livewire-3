@@ -11,7 +11,7 @@
                         @enderror
                     </div>
                     <div class="form-group mb-5">
-                        <label for="">Content <small class="text-muted" x-text="$wire.content.length"></small></label>
+                        <label for="">Content <small class="text-muted" text="$wire.content.length"></small></label>
                         <textarea class="form-control" wire:model.blur='content' cols="30" rows="10"></textarea>
                         @error('content')
                             <p class="text-danger" style="font-size: 12.5px;">{{ $message }}</p>
@@ -25,4 +25,3 @@
         </div>
     </div>
 </div>
-
