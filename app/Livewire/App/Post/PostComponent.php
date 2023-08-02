@@ -3,6 +3,7 @@
 namespace App\Livewire\App\Post;
 
 use Livewire\Component;
+use Livewire\Attributes\Js;
 use Livewire\Attributes\Computed;
 
 class PostComponent extends Component
@@ -26,6 +27,15 @@ class PostComponent extends Component
         ]);
 
 
+    }
+
+    #[Js]
+    public function resetInputs()
+    {
+        return <<<'JS'
+            $wire.title = '';
+            $wire.content = '';
+        JS;
     }
 
     public function profile_data()
