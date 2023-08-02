@@ -18,11 +18,10 @@
                         @enderror
                     </div>
                     <div class="form-group mb-4 text-center">
-                        <button class="btn btn-sm btn-success" wire:click="resetInputs" type="button">Add Post</button>
+                        <button class="btn btn-sm btn-success" type="submit">Add Post</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 </div>

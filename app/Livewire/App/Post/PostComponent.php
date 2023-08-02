@@ -4,20 +4,15 @@ namespace App\Livewire\App\Post;
 
 use Livewire\Component;
 use Livewire\Attributes\Js;
+use Livewire\Attributes\Rule;
 use Livewire\Attributes\Computed;
 
 class PostComponent extends Component
 {
     #[Computed]
-    public $title, $content;
 
-    public function updated($fields)
-    {
-        $this->validateOnly($fields, [
-            'title' => 'required',
-            'content' => 'required',
-        ]);
-    }
+    #[Rule('required')]
+    public $title, $content;
 
     public function addPost()
     {
